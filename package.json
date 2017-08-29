@@ -4,9 +4,9 @@
   "description": "Biblioteca do curso JS com TDD na prática",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/**/*.spec.js"
+    "lint": "./node_modules/.bin/eslint --env mocha .",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register tests/**/*.spec.js",
+    "precommit": "npm run lint && npm run test"
   },
   "repository": {
     "type": "git",
